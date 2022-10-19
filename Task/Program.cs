@@ -16,3 +16,26 @@ for (int i = 0; i < size; i++)
     string element = Convert.ToString(Console.ReadLine());
     arrayStrings[i] = element;
 }
+string[] arrayResult = new string[size];
+int len = 3;
+int pos = 0;
+
+for (int j = 0; j < size; j++)
+{
+    if (arrayStrings[j].Length <= len)
+    {
+        arrayResult[pos] = arrayStrings[j];
+        pos++;
+    }
+}
+
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+PrintArray(arrayResult);
